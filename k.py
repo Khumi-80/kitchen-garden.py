@@ -1,9 +1,7 @@
 import streamlit as st
 from transformers import pipeline
-
 # Load the pre-trained question-answering model
 qa_model = pipeline("question-answering", model="distilbert-base-uncased-distilled-squad")
-
 # Define the gardening knowledge base
 context_data = """
 In Punjab (Pakistan and India), the month of October is suitable for planting cool-season crops such as carrots, spinach, lettuce, radishes, and peas.
@@ -12,7 +10,6 @@ Ensure regular watering and well-drained soil for all winter crops.
 Avoid planting frost-sensitive crops until temperatures stabilize.
 Other suitable vegetables for the season include garlic, turnips, and beets.
 """
-
 # Streamlit app layout
 st.title("Kitchen Garden Q&A Bot")
 st.write("Ask questions about gardening in Punjab during October:")
@@ -26,4 +23,3 @@ if user_question:
     
     # Display the answer
     st.write("**GardenBot:**", result['answer'])
-
