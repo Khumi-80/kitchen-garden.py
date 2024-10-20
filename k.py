@@ -1,7 +1,3 @@
-!pip install transformers
-# 1. Install Hugging Face's transformers library
-!pip install transformers
-
 # 2. Import necessary modules
 from transformers import pipeline
 
